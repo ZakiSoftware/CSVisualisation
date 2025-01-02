@@ -21,7 +21,11 @@
     --background-light: #1e1e1e;
     --text-dark: #f9f9f9;
   }
-
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: ease;
+    }
   .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--text-light);
@@ -88,10 +92,7 @@
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
-  .chapter-card a {
-    text-decoration: none;
-    color: inherit;
-    }
+    
   .chapter-card i {
     font-size: 2rem;
     color: var(--primary-color);
