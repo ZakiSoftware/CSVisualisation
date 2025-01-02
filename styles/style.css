@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --accent-color: #ff6f61;
+    --background-light: #f9f9f9;
+    --text-dark: #333;
+    --text-light: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.dark-mode {
+    --background-light: #1e1e1e;
+    --text-dark: #f9f9f9;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+    padding: 120px 20px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  .cta-button {
+    background: var(--accent-color);
+    color: var(--text-light);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .cta-button:hover {
+    background: #ff4a3d;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    animation: fadeInDown 1s ease;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin: 20px 0 40px;
+    animation: fadeInUp 1s ease;
+  }
+
+  .chapters {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .chapter-card a{
+    text-decoration: none;
+    color: inherit;
+  }  
+  .chapters h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .chapter-card {
+    background: var(--text-light);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .chapter-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .chapter-card a {
+    text-decoration: none;
+    color: inherit;
+    }
+  .chapter-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+
+  .chapter-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #1e1e1e;
+  }
+
+  .chapter-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .footer {
+    background: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--text-light);
+    color: #1e1e1e;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background 0.3s, color 0.3s;
+    z-index: 10;
+}
+
+  .dark-mode-toggle:hover {
+    background: var(--accent-color);
+    color: var(--text-light);
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

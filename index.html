@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSVisualisation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSVisualisation - Visualize Computer Science Concepts</title>
+  <link rel="stylesheet" href="./../styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <h1 style="text-align: center ;">Welcome to CSVisualisation</h1>
-    <h4>Modules : </h4>
-    <a href="./algorithms/index.html">Algorithms</a> 
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Hero Section -->
+  <div class="hero" data-aos="fade-in">
+    <h1>CSVisualisation</h1>
+    <p>Visualize Computer Science Concepts Like Never Before</p>
+    <button class="cta-button">Explore Modules</button>
+  </div>
+
+  <!-- Modules Section -->
+  <div class="chapters">
+    <h2 data-aos="fade-up">Modules and Chapters</h2>
+    <div class="chapter-grid">
+      <div class="chapter-card" data-aos="fade-up" data-aos-delay="100">
+        <a href="./dataStructures/index.html">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Data Structures</h3>
+            <p>Learn arrays, linked lists, trees, and more with interactive visualizations.</p>
+        </a>
+     </div>
+        <div class="chapter-card" data-aos="fade-up" data-aos-delay="200">
+            <a href="./algorithms/index.html">
+            <i class="fas fa-sort-amount-up"></i>
+            <h3>Algorithms</h3>
+            <p>Understand sorting, searching, and graph algorithms step-by-step.</p>
+        </a>   
+    </div>
+        <div class="chapter-card" data-aos="fade-up" data-aos-delay="300">
+            <a href="./networking/index.html">
+                <i class="fas fa-network-wired"></i>
+                <h3>Networking</h3>
+                <p>Explore how data travels across networks with real-time simulations.</p>
+            </a>
+        </div>
+    </div>
+  </div>
+
+  <!-- Footer --> 
+  <div class="footer">
+    <p>© 2024 CSVisualisation. All rights reserved. | <a href="https://github.com/ZakiSoftware/CSVisualisation" style="color: var(--accent-color);" target="_blank">Contribute on GitHub</a></p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="./../script/script.js"></script>
 </body>
 </html>
