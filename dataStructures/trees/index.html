@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trees - CSVisualisation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./../../styles/style.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Return Button -->
+  <a href="../index.html" class="return-button">
+    <i class="fas fa-arrow-left"></i>
+    Return to Data Structures
+  </a>
+
+  <!-- Hero Section -->
+  <div class="hero" data-aos="fade-in">
+    <h1>Tree Visualization</h1>
+    <p>Create and visualize binary trees with an interactive interface</p>
+  </div>
+
+  <!-- Tree Input Section -->
+  <div class="tree-container">
+    <div class="input-section">
+      <h2>Create Your Tree</h2>
+      <div class="input-group">
+        <input type="number" id="nodeValue" placeholder="Enter node value" class="tree-input">
+        <button onclick="addNode()" class="tree-button">Add Node</button>
+      </div>
+      <div class="tree-actions">
+        <button onclick="clearTree()" class="tree-button danger">Clear Tree</button>
+        <button onclick="balanceTree()" class="tree-button">Balance Tree</button>
+      </div>
+      <div class="tree-info">
+        <h3>Tree Information</h3>
+        <p>Nodes: <span id="nodeCount">0</span></p>
+        <p>Height: <span id="treeHeight">0</span></p>
+        <p>Is Balanced: <span id="isBalanced">Yes</span></p>
+      </div>
+    </div>
+
+    <!-- Tree Visualization Area -->
+    <div class="visualization-section">
+      <div id="treeCanvas"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2024 CSVisualisation. All rights reserved. | <a href="https://github.com/ZakiSoftware/CSVisualisation" style="color: var(--accent-color);" target="_blank">Contribute on GitHub</a></p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="./../../script/script.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html> 

@@ -159,3 +159,36 @@
       transform: translateY(0);
     }
   }
+
+  .return-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: var(--text-light);
+    color: #1e1e1e;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background 0.3s, color 0.3s;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.return-button i {
+    font-size: 1rem;
+}
+
+.return-button:hover {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+body.dark-mode .return-button {
+    background: #333;
+    color: var(--text-light);
+}

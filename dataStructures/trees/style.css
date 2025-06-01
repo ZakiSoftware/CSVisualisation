@@ -1,0 +1,178 @@
+.tree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.input-section {
+  background: var(--text-light);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.input-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tree-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.tree-button {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.tree-button:hover {
+  background: var(--secondary-color);
+}
+
+.tree-button.danger {
+  background: var(--accent-color);
+}
+
+.tree-button.danger:hover {
+  background: #ff4a3d;
+}
+
+.tree-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tree-info {
+  background: rgba(106, 17, 203, 0.1);
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.tree-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.tree-info p {
+  margin: 0.5rem 0;
+  color: var(--text-dark);
+}
+
+.visualization-section {
+  background: var(--text-light);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#treeCanvas {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .input-section,
+body.dark-mode .visualization-section {
+  background: #2a2a2a;
+}
+
+body.dark-mode .tree-info {
+  background: rgba(106, 17, 203, 0.2);
+}
+
+body.dark-mode .tree-input {
+  background: #333;
+  color: var(--text-light);
+  border-color: var(--secondary-color);
+}
+
+/* Tree node styling */
+.node-circle {
+  fill: var(--primary-color);
+  stroke: var(--text-light);
+  stroke-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.node:hover .node-circle {
+  fill: var(--secondary-color);
+  r: 28;
+}
+
+.node-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  fill: var(--text-light);
+  pointer-events: none;
+}
+
+.link {
+  fill: none;
+  stroke: var(--primary-color);
+  stroke-width: 2px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  stroke: var(--secondary-color);
+  stroke-width: 3px;
+  opacity: 1;
+}
+
+body.dark-mode .node-text {
+  fill: var(--text-light);
+}
+
+body.dark-mode .node-circle {
+  stroke: #2a2a2a;
+}
+
+body.dark-mode .link {
+  stroke: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  .tree-container {
+    padding: 4rem 2rem;
+  }
+
+  .visualization-section {
+    min-height: 700px;
+  }
+
+  #treeCanvas {
+    min-height: 700px;
+  }
+} 
